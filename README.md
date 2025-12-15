@@ -3,7 +3,7 @@
 A modern, high-contrast, and responsive portfolio designed to showcase projects, skills, and key academic and professional achievements. The design is inspired by contemporary dark-themed web development showcases, focusing on clarity and compelling visual hierarchy.
 
 ## 🔗 Live Demo
-[Access the Live Portfolio Here](https://kowshika555.github.io/PORTFOLIO-NEW/) 
+[Access the Live Portfolio Here](https://kowshika555.github.io/Portfolioo/) 
 
 
 ## 🚀 Key Highlights
