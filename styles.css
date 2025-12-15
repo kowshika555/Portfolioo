@@ -1,0 +1,361 @@
+/* --- 1. GLOBAL RESETS & VARIABLES (Dark Theme) --- */
+:root {
+    --bg-color: #1a1a1a; /* Dark background */
+    --text-color: #ffffff; /* White text */
+    --secondary-text: #a8a8a8; /* Light gray for body text */
+    --accent-color: #00bcd4; /* Cyan/Teal accent */
+    --card-bg: #292929; /* Slightly lighter card background */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- 2. HEADER & NAVIGATION --- */
+header {
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--card-bg);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* --- 3. HERO SECTION --- */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+.hero-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-left {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    margin-bottom: 30px;
+}
+
+.hero-photo {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px; /* Matches the clean, rectangular photo in the example */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero CTA and Socials */
+.cta-group {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.button {
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.primary {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.primary:hover {
+    background-color: #00a4b3;
+}
+
+.social-icons a {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-left: 20px;
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Trusted By Section (Tech Proficiencies) */
+.trusted-by {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--card-bg);
+}
+
+.trusted-by p {
+    font-weight: bold;
+    color: var(--secondary-text);
+    margin-right: 10px;
+}
+
+.trusted-by span {
+    color: var(--accent-color);
+    border: 1px solid var(--card-bg);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* --- 4. WHAT I DO & SERVICES --- */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 60px;
+}
+
+/* Stats Section (New addition based on the example's numbers) */
+.value-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    margin-bottom: 50px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    transition: border 0.3s;
+    border: 1px solid transparent;
+}
+
+.service-card:hover {
+    border-color: var(--accent-color);
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    color: var(--secondary-text);
+    margin-bottom: 15px;
+}
+
+.card-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- 5. PROJECTS & ACHIEVEMENTS --- */
+.section-dark {
+    background-color: var(--card-bg);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--bg-color);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.role-tag {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Achievements List */
+.achievement-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.achievement-list li {
+    background-color: var(--card-bg);
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    border-left: 5px solid var(--accent-color);
+}
+
+.achievement-list li span {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-right: 10px;
+}
+
+/* --- 6. FOOTER --- */
+footer {
+    background-color: var(--bg-color);
+    color: var(--secondary-text);
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--card-bg);
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-info span {
+    margin: 0 10px;
+    color: var(--secondary-text);
+}
+
+/* --- 7. MOBILE RESPONSIVENESS --- */
+@media (max-width: 900px) {
+    .hero-content-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-photo {
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .cta-group {
+        justify-content: center;
+    }
+
+    .trusted-by {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        display: none; /* Hide for simple mobile menu setup */
+    }
+
+    .value-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
